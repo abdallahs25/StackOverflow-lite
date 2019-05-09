@@ -1,11 +1,16 @@
 h1{
     text-align: center;
     color: blue;
+    font-size: 30px;
   }
-h2{
+h3{
   text-align: center;
   color: black
 } 
+h2{
+  text-align: center;
+  color: blue;
+}
 body{
   
 }
@@ -29,11 +34,7 @@ body{
     background-color: #f1f1f1;
     padding: 20px 10px;
   }
-.footer {
-    overflow: hidden;
-    background-color: black;
-    padding: 20px 10px;  
-}  
+
   /* Style the header links */
   .header a {
     float: left;
@@ -200,44 +201,32 @@ body{
     }
   }
    /* The side navigation menu */
-.sidebar1 {
-  margin: 0;
-  padding: 0;
+
+.content1 {
+  position: relative;
+}
+#sidebar1 {
   width: 200px;
-  background-color: #f1f1f1;
-  position:absolute;
-  height: 100%;
-  
-z-index: 2; /* Stay on top */
-top: 100px; /* Stay at the top */
-left: 0;
-overflow-x: hidden; /* Disable horizontal scroll */
-
+  margin-right: 2.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  text-align: left;
+  border: 1px solid red;
+  float: right;
+}
+#sidebarcontents1 {
+  padding: 5px 0px 5px 0px;
 }
 
-@media screen and (max-width: 700px) {
-  .sidebar1 {
-    width: 100%;
-    height: auto;
-    position: fixed;
-    overflow: hidden;
-    float: right;
-    text-align: justify;
-    float: none;
-  }
-  
-  div.content {margin-right: 0;}
+.footer {
+  background-color:black;
+  color:white;
+  clear:both;
+  text-align:center;
+ padding:5px;      
 }
-
-
-  .footer {
-    position: absolute;
-    bottom: -100%;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 60px;
-    background-color: #f5f5f5;
-  }
   .container1{
     border-radius: 5px;
     background-color: black;
@@ -251,3 +240,7 @@ overflow-x: hidden; /* Disable horizontal scroll */
 .body{
   color: blue ;
 }
+
+
+
+
