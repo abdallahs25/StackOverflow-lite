@@ -1,7 +1,7 @@
 h1{
     text-align: center;
     color: blue;
-    font-size: 30px;
+    font-size: 20px;
   }
 h3{
   text-align: center;
@@ -9,10 +9,12 @@ h3{
 } 
 h2{
   text-align: center;
-  color: blue;
+  color: white;
 }
 body{
-  
+ background: white;
+ height: 100%;
+ overflow: scroll;
 }
 
   p {
@@ -32,9 +34,11 @@ body{
 .header {
     overflow: hidden;
     background-color: #f1f1f1;
-    padding: 20px 10px;
-    position: fixed;
+    padding: 20px 5px;
+    position: absolute;
     width: 98%;
+    top: 0;
+    z-index:1; 
   }
 
   /* Style the header links */
@@ -100,6 +104,8 @@ body{
     padding: 8px 290px;
     outline: none;
     display:inline;
+    position: relative;
+    z-index: 1;
 }
 
 #search-form input[type='submit'] {
@@ -117,7 +123,8 @@ body{
 
 #search-form {
     position: center;
-    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
     display:inline;
 }
 .container {
@@ -127,11 +134,15 @@ body{
     margin: 6%;
     margin-left: 15.5%;
     width: 60%;
-    
+    height: 20%;
     border: 3px solid blue;
     padding: 50px;
     color: blue;
-    
+    padding-bottom: 2.5rem;
+    min-height: 100vh;
+    overflow: scroll;
+    z-index: 3;
+    content: normal;
   }
   input[type=submit] {
     background-color: lightblue;
@@ -151,7 +162,7 @@ body{
     width: 200px;
     background-color: #f1f1f1;
     position:fixed;
-    height: 100%;
+    height: 77%;
     z-index: 2; /* Stay on top */
     top: 100px; /* Stay at the top */
     left: 0;
@@ -206,19 +217,21 @@ body{
   }
    /* The side navigation menu */
 
-.content1 {
-  position: -ms-page;
-}
+
+  
+
 #sidebar1 {
-  width: 200px;
-  margin-right: 2.5px;
+  width: 25%;
+  margin-right: 2px;
   position: fixed;
-  top: 90px;
+  top: 98px;
   right: 0;
   padding: 0;
   text-align: left;
-  border: 1px solid red;
+  border: 1px solid blue;
   float: right;
+  height: 77%;
+  background-color: #f1f1f1;
 }
 #sidebarcontents1 {
   padding: 5px 0px 5px 0px;
@@ -237,17 +250,49 @@ body{
   }
 .body{
   color: blue ;
+  position: relative; 
+  min-height:100%; 
+  
+  height: 100%; 
+  padding-bottom: 54px;
+  left: 10%;
+  width: 70%;
+  padding: 16px;
+  
 }
-table, th, td {
-  border: 1px solid black;
+table,td {
+  border: 1px solid blue;
+  padding: 5px; 
+}
+th{
+  border: 1px ;
   padding: 15px;
+  text-align: center;
+  background-color:#696969;
+  color: white; 
 }
+a{
+  color:white;
+}
+table{
+  height: 5px;
+
+}
+
 .footer {
-  position: fixed;
-  left: 0;
+  position: absolute;
   bottom: 0;
-  width: 100%;
-  background-color: black;
-  color: white;
-  text-align: center;      
+  width: 100%; 
+  height:54px;
+}
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .body {
+  padding-top: 102px;
 }
