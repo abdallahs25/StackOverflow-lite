@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/home/abdallah/Documents/Projects/StackOverflow-lite/UI/Static/css/style.css">
+        
       <title></title>
     </head>
     
@@ -10,7 +12,7 @@
    <body>
      
      
-      <div class="header">
+      <div class="header" id="myHeader">
           
                
           <a href="/home/abdallah/Documents/Projects/StackOverflow-lite/UI/Static/index.html" class="logo"><img src="/home/abdallah/Documents/Projects/StackOverflow-lite/UI/Static/img/download.png" alt="Image" height="20" width="20">StackOverflow-lite</a>
@@ -28,9 +30,11 @@
         </div>
         <div class="sidebar">
             <a href="/home/abdallah/Documents/Projects/StackOverflow-lite/UI/Static/index.html">Home</a>
-            <a href="#news">Science</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+            <a href="/home/abdallah/Documents/Projects/StackOverflow-lite/UI/Static/Pages/Science.html">Science</a>
+            <a href="#contact">Math</a>
+            <a href="#about">English</a>
+            <a href="#about">S/st</a>
+            <a href="#about">Kiswahili</a>
           </div>
           <div class="content1">
               <div>Here comes my content</div>
@@ -43,9 +47,12 @@
                 </section></div>
               </div>
             </div>
-  <div class="body">
-     <div class="container">
-        <form action="action_page.php">
+            
+       
+           
+    <div class="body">
+      <div class="container">
+        <form action="action_page.html">
        <h1>Login</h1>
           
           
@@ -64,10 +71,25 @@
   </div>
     
     
-      <div class="footer">
-        <div class="container1">
-            © 2019 Copyright:Abdallahs25
-        </div>
-      </div>     
-    </body>
- </html>
+  <div class="footer">
+      <div class="container1">
+          © 2019 Copyright:Abdallahs25
+      </div>
+    </div>
+    <script>
+      window.onscroll = function() {myFunction()};
+      
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+      </script>         
+</body>
+
+</html>
